@@ -1,0 +1,66 @@
+section#contact {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+section#contact a > * {
+    rotation-point: center;
+    transition: 0.3s;
+}
+
+section#contact a:hover > * {
+    transform: translate(10px, -55px) scale(2) rotate(370deg);
+    transition: 0.3s;
+    border-radius: 15px;
+}
+
+footer a > * {
+    rotation-point: center;
+    transition: 0.3s;
+}
+
+footer a:hover > * {
+    transform: translate(10px, -55px) scale(2.5) rotate(370deg);
+    transition: 0.3s;
+    border-radius: 15px;
+}
+
+.play-button {
+    background-image: linear-gradient(to right, #000000 0%, #ffffff 51%, #55923f 100%);
+    cursor: pointer;
+    box-sizing: border-box;
+    justify-content: center;
+    margin: 30px;
+    padding: 15px 30px;
+    text-align: center;
+    transition: 0.5s;
+    background-size: 300% auto;
+    outline: none;
+    border: 5px rgb(13, 110, 253);
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+}
+
+.play-button:hover {
+    cursor: pointer;
+    transform: scale(2);
+    background-position: right center;
+    color: #0d6efd;
+    transition: 0.5s;
+}
+
+a .play-button {
+    cursor: pointer;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: larger;
+    font-weight: bolder;
+    color: white;
+    transition: 0.5s;
+}
+
+a:hover .play-button {
+    cursor: pointer;
+    color: #0d6efd;
+    transition: 0.5s;
+}

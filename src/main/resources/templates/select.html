@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <meta name="description" content=""/>
+    <meta name="author" content=""/>
+    <title>QuizApp</title>
+    <link rel="icon" type="image/x-icon" href="assets/lightBulb.png"/>
+
+    <!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> CORE THEME CSS (includes bootstrap) << -->
+    <link href="css/quizStyle.css" rel="stylesheet"/>
+    <link href="css/styles.css" rel="stylesheet"/>
+</head>
+<body>
+
+<!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> NAVIGATION <<<<<<<<<<<<<<<<<<<<<<<<<<< -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+    <div class="container px-4">
+        <a class="navbar-brand js-scroll-trigger" href="/">QuizApp! - pick options</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span
+                class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#options">Options</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> OPTIONS SECTION <<<<<<<<<<<<<<<<<<<<<< -->
+<section id="options">
+    <div class="container">
+        <div class="row justify-content-center">
+            <form action="#" th:action="@{/select}" th:object="${gameOptions}" method="post">
+                <div class="form-row">
+                    <div class="form-group">
+                        <h4>Questions:</h4>
+                        <label for="numberOfQuestionsInput">Number: </label>
+                        <input class="form-control" name="numberOfQuestionsInput" id="numberOfQuestionsInput"
+                               th:field="*{numberOfQuestions}"
+                               type="number" min="1" max="20" step="1"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <h4>Difficulty:</h4>
+                    <th:block th:each="difficulty : ${T(pl.sdacademy.projektplus.quiz.frontend.Difficulty).values()}">
+                        <div class="form-check form-check-inline">
+                            <label>
+                                <input class="form-check-input" type="radio" name="difficultyRadioOptions"
+                                       th:id="'difficulty_' + ${difficulty}"
+                                       th:value="${difficulty}"
+                                       th:field="*{difficulty}">
+                            </label>
+                            <label class="form-check-label"
+                                   th:for="'difficulty_' + ${difficulty}"
+                                   th:text="${difficulty}">
+
+                            </label>
+                        </div>
+                    </th:block>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <h4>Category:</h4>
+                        <th:block th:each="category : ${categories}">
+                            <div class="form-check">
+                                <label>
+                                    <input class="form-check-input" type="radio" name="categoryRadioOptions"
+                                           th:id="'category_' + ${category.getId()}"
+                                           th:value="${category.getId()}"
+                                           th:field="*{categoryId}">
+                                </label>
+                                <label class="form-check-label"
+                                       th:for="'difficulty_' + ${category.getId()}"
+                                       th:text="${category.getName()}">
+                                </label>
+                            </div>
+                        </th:block>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary">Play!</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> CONTACT SECTION <<<<<<<<<<<<<<<<<<<<<< -->
+<section id="contact">
+    <div>
+        <h2>Contact me</h2>
+        <p class="m-0 contacts-images">
+            <a href="mailto:codeofcarbon@gmail.com"><img src="assets/mail - blue rounded square.svg" alt="Gmail"></a>
+            <a href=""><img src="assets/telephone - blue rounded square.svg" alt="Telephone"></a>
+            <a href=""><img src="assets/github3 - blue rounded square.svg" alt="Github"></a>
+            <a href=""><img src="assets/linked in - blue rounded square.svg" alt="LinkedIn"></a>
+            <a href=""><img src="assets/messenger - blue rounded square.svg" alt="Messenger"></a>
+            <a href=""><img src="assets/slack - blue rounded square.svg" alt="Slack"></a>
+        </p>
+    </div>
+</section>
+
+<!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> FOOTER <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< -->
+<footer class="bg-black">
+    Copyright &copy; Code Of Carbon
+    <span th:text="${#dates.year(#dates.createNow())}"></span>
+</footer>
+
+<!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> BOOTSTRAP CORE JS <<<<<<<<<<<<<<<<<<<< -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> CORE THEME JS <<<<<<<<<<<<<<<<<<<<<<<< -->
+<script src="js/scripts.js"></script>
+
+</body>
+</html>
