@@ -1,8 +1,11 @@
 package pl.sdacademy.projektplus.quiz.frontend;
 
 import org.junit.jupiter.api.Test;
+
 import java.util.EnumSet;
-import static org.junit.jupiter.api.Assertions.*;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNull;
 import static pl.sdacademy.projektplus.quiz.frontend.Difficulty.*;
 
 class DifficultyTest {

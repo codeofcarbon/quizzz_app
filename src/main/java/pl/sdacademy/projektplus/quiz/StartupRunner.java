@@ -24,7 +24,7 @@ public class StartupRunner implements CommandLineRunner {
     }
 
     @Override
-    public void run(String...args) {
+    public void run(String... args) {
         log.info("Executing startup actions...");
         playerRepository.save(new PlayerEntity("John"));
         playerRepository.save(new PlayerEntity("Harry"));

@@ -125,16 +125,6 @@ public class QuizDataService {
                 );
                 eachDifficultyQuestionCount.computeIfPresent(filledDifficulty, (d, count) -> count - numberToTransfer);
                 eachDifficultyQuestionCount.put(otherDifficulty, numberToTransfer);
-            } else {
-// TODO =============================================================================================================
-//                we have 20 questions, all from the MEDIUM category, supplemented with those from EASY and HARD.
-//      ----->>>  Anyway, it's not perfect - we wanted to complete the EASY and HARD questions "halfway"
-//                in that case (getting 5 of each). Meanwhile, we have 8 HARD questions and only 2 EASY.
-// TODO =============================================================================================================
-//                in the situation we are considering, the second presented condition (the internal one)
-//                is false (otherDifficulty is null) - because we had to select 2 questions from the EASY category.
-//      ----->>>  add else here and handle this situation properly (10 MEDIUM questions and 5 EASY and HARD each)
-//      ----->>>  implement tests for that.
             }
         }
         return eachDifficultyQuestionCount;
