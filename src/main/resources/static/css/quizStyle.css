@@ -14,6 +14,11 @@ section#contact a:hover > * {
     border-radius: 15px;
 }
 
+section#about > * {
+    padding-top: 3rem;
+    padding-bottom: 7rem;
+}
+
 footer a > * {
     rotation-point: center;
     transition: 0.3s;

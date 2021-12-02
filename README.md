@@ -9,24 +9,24 @@ Web application that uses a Trivia questions database
 * [To do](#to-do)
 
 ## Overview
-The aim of this project is to prepare a quiz game in a web version. 
-The user selects the question category that interests him and the level of difficulty. 
-On this basis, the application generates a set of questions for the player. 
-Each of the questions is presented on the browser screen, and the answers are saved. 
+The aim of this project is to prepare a quiz game in a web version.
+The user selects the question category that interests him and the level of difficulty.
+On this basis, the application generates a set of questions for the player.
+Each of the questions is presented on the browser screen, and the answers are saved.
 After answering all the questions from the set, the game ends and the player is presented with the result.
 
 ## Screenshots
 ###### Landing page
-![browser_home](./src/assets/browser_home.png) ![mobile_home](./src/assets/lightBulb.png)
+![browser_home](src/main/resources/static/screenshots/browser_home.png) ![mobile_home](src/main/resources/static/screenshots/mobile_home.png)
 
 ###### Selecting categories
-![browser_select](./src/assets/browser_select.png) ![mobile_select](./src/assets/mobile_select.png)
+![browser_select](src/main/resources/static/screenshots/browser_select.png) ![mobile_select](src/main/resources/static/screenshots/mobile_select.png)
 
 ###### Quiz view
-![browser_game](./src/assets/browser_game.png) ![mobile_game](./src/assets/mobile_game.png)
+![browser_game](src/main/resources/static/screenshots/browser_game.png) ![mobile_game](src/main/resources/static/screenshots/mobile_game.png)
 
 ###### Summary view
-![browser_summary](./src/assets/browser_summary.png) ![mobile_summary](./src/assets/mobile_summary.png)
+![browser_summary](src/main/resources/static/screenshots/browser_summary.png) ![mobile_summary](src/main/resources/static/screenshots/mobile_summary.png)
 
 ## Technologies
 - Java 11
@@ -43,7 +43,7 @@ After answering all the questions from the set, the game ends and the player is 
 - Clone the repo:
 
 ``https://github.com/CodeOfCarbon/quizzz_app``
-  
+
 - Run command line in the project directory and type following command:
 
 ``mvn clean compile package && cd target && java -jar quizApp-1.0.0.jar``
