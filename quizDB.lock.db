@@ -1,0 +1,6 @@
+#FileLock
+#Thu Dec 02 00:33:15 CET 2021
+server=192.168.0.107\:49242
+hostName=karbon
+method=file
+id=17d78585004d05cd04feae2d97c85ef3654ba82411e
