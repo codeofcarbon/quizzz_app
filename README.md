@@ -1,5 +1,5 @@
 # Quiz App
-Web application that uses a Trivia questions database
+Web application that uses an external questions database (TriviaDB API)
 
 ## Table of contents
 * [Overview](#overwiev)
