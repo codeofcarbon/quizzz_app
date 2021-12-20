@@ -42,7 +42,7 @@ After answering all the questions from the set, the game ends and the player is 
 ## How to start
 - Clone the repo:
 
-``https://github.com/CodeOfCarbon/quizzz_app``
+``https://github.com/codeofcarbon/quizzz_app``
 
 - Run command line in the project directory and type following command:
 
