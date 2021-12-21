@@ -14,6 +14,10 @@ The user selects the question category that interests him and the level of diffi
 On this basis, the application generates a set of questions for the player.
 Each of the questions is presented on the browser screen, and the answers are saved.
 After answering all the questions from the set, the game ends and the player is presented with the result.
+Application is capable to further upgrades, like:
+- *Multiplayer game*
+- *Time limits*
+- *Highscore table view*
 
 ## Screenshots
 ###### Landing page
@@ -50,10 +54,5 @@ After answering all the questions from the set, the game ends and the player is 
 
 
 ## To do
-- [ ] *Error handling - redirecting to an error page and/or displaying an appropriate error message*
 - [ ] *Database for storing tasks downloaded from Open Trivia DB and users scores*
-- [ ] *Authentication and authorization*
-- [ ] *Administration module*
-- [ ] *Multiplayer game*
-- [ ] *Time limits*
-- [ ] *Highscore table view*
+- [ ] *Administration module. Authentication and authorization*
